@@ -480,3 +480,14 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+# IDE and environment files
+.env
+.env.*
+
+# .NET Configuration (Contains passwords!)
+appsettings.json
+appsettings.Development.json
+appsettings.Production.json
+
+# User Secrets
+/usersecrets/

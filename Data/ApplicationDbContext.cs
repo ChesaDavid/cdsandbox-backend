@@ -11,7 +11,7 @@ public class ApplicationDbContext : DbContext
     public DbSet<ProjectFile> ProjectFiles { get; set; }
     public DbSet<CodeBlock> CodeBlocks { get; set; }
     public DbSet<ExecutionLog> ExecutionLogs { get; set; } 
-
+    
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<ProjectFile>()
@@ -20,4 +20,5 @@ public class ApplicationDbContext : DbContext
             .HasForeignKey(b => b.ProjectFileId);
     }
     public DbSet<User> Users { get; set; }
+    public DbSet<Project> Projects { get; set; }
 }

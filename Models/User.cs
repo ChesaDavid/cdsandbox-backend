@@ -1,13 +1,22 @@
-﻿namespace cdsandbox.Backend.Models;
+﻿    using System.ComponentModel.DataAnnotations.Schema;
+    using System.ComponentModel.DataAnnotations;
+    namespace cdsandbox.Backend.Models;
 
-public class User
-{
-    public int Id { get; set; }
-    public string Email { get; set; } = string.Empty;
-    
-    public string PasswordHash { get; set; } = string.Empty;
-    
-    public string Color { get; set; } = "#3d86f7";
-    public bool IsAI { get; set; } = false;
-    public string Username { get; set; } = string.Empty;
-}
+    [Table("Users")]
+    public class User
+    {
+        [Key] [Column("id")] public string Id { get; set; } = Guid.NewGuid().ToString("N");
+        
+        [Column("Email")]
+        public string Email { get; set; } = string.Empty;
+        
+        [Column("PasswordHash")]
+        public string PasswordHash { get; set; } = string.Empty;
+        
+        [Column("Color")]
+        public string Color { get; set; } = "#3d86f7";
+        [Column("IsAI")]
+        public bool IsAI { get; set; } = false;
+        [Column("Username")]
+        public string Username { get; set; } = string.Empty;
+    }
