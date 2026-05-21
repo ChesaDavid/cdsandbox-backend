@@ -1,14 +1,23 @@
 using cdsandbox.Backend.Data;
-using cdsandbox.Backend.Models; 
+using cdsandbox.Backend.Models;
+using DotNetEnv;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Hosting;
+
 
 var builder = WebApplication.CreateBuilder(args);
+Env.Load();
+var connectionString = Environment.GetEnvironmentVariable("DATABASE_URL");
+// var jwtKey = Environment.GetEnvironmentVariable("JWT_KEY");
+// var jwtIssuer = Environment.GetEnvironmentVariable("JWT_ISSUER");
+// var jwtAudience = Environment.GetEnvironmentVariable("JWT_AUDIENCE");
 
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseNpgsql(connectionString));
+    options
+        .UseNpgsql(connectionString));
 
 builder.Services.AddSignalR();
+
 
 builder.Services.AddCors(options =>
 {
@@ -42,3 +51,4 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+

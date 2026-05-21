@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\chesa\\OneDrive\\Documents\\proiect-cdsandbox\\cdsandbox.Backend\\cdsandbox.Backend.csproj": {}
+    "C:\\Users\\ChesaDavid\\OneDrive - Universitatea Politehnica Timisoara\\Desktop\\cdsandbox\\cdsandbox-backend\\cdsandbox.Backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\chesa\\OneDrive\\Documents\\proiect-cdsandbox\\cdsandbox.Backend\\cdsandbox.Backend.csproj": {
+    "C:\\Users\\ChesaDavid\\OneDrive - Universitatea Politehnica Timisoara\\Desktop\\cdsandbox\\cdsandbox-backend\\cdsandbox.Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\chesa\\OneDrive\\Documents\\proiect-cdsandbox\\cdsandbox.Backend\\cdsandbox.Backend.csproj",
+        "projectUniqueName": "C:\\Users\\ChesaDavid\\OneDrive - Universitatea Politehnica Timisoara\\Desktop\\cdsandbox\\cdsandbox-backend\\cdsandbox.Backend.csproj",
         "projectName": "cdsandbox.Backend",
-        "projectPath": "C:\\Users\\chesa\\OneDrive\\Documents\\proiect-cdsandbox\\cdsandbox.Backend\\cdsandbox.Backend.csproj",
-        "packagesPath": "C:\\Users\\chesa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\chesa\\OneDrive\\Documents\\proiect-cdsandbox\\cdsandbox.Backend\\obj\\",
+        "projectPath": "C:\\Users\\ChesaDavid\\OneDrive - Universitatea Politehnica Timisoara\\Desktop\\cdsandbox\\cdsandbox-backend\\cdsandbox.Backend.csproj",
+        "packagesPath": "C:\\Users\\ChesaDavid\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ChesaDavid\\OneDrive - Universitatea Politehnica Timisoara\\Desktop\\cdsandbox\\cdsandbox-backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\chesa\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\ChesaDavid\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -38,7 +38,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net10.0": {
@@ -47,6 +47,10 @@
             "BCrypt.Net-Next": {
               "target": "Package",
               "version": "[4.1.0, )"
+            },
+            "DotNetEnv": {
+              "target": "Package",
+              "version": "[3.2.0, )"
             },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
@@ -86,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
