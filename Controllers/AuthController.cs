@@ -3,7 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using cdsandbox.Backend.Data;
 using cdsandbox.Backend.Models;
 using BCrypt.Net;
-using Microsoft.AspNetCore.Identity.Data;
 using LoginRequest = cdsandbox.Backend.DTOs.LoginRequest;
 using RegisterRequest = cdsandbox.Backend.DTOs.RegisterRequest;
 
@@ -31,7 +30,7 @@ public class AuthController : ControllerBase
         }
         
         return Ok(new {
-            user.id,
+            user.Id,
             user.Username,
             user.Email,
             user.Color
@@ -51,12 +50,14 @@ public class AuthController : ControllerBase
         {
             return BadRequest("Email already in use.");
         }
-
         var user = new User
         {
+            Id = Guid.NewGuid().ToString(),
             Email = request.Email,
             Username = request.Username,
-            PasswordHash = BCrypt.Net.BCrypt.HashPassword(request.Password)
+            PasswordHash = BCrypt.Net.BCrypt.HashPassword(request.Password),
+            Color = "#3d86f7",
+            IsAI = false
             
         };
 
@@ -64,7 +65,7 @@ public class AuthController : ControllerBase
         await _context.SaveChangesAsync();
 
         return Ok(new {
-            user.id,
+            user.Id,
             user.Username,
             user.Email,
             user.Color
